@@ -23,6 +23,7 @@ object SentenceDetection {
   }
 
   def sentencesWithHero(comment: Comment) = {
+    // TODO: Maybe lowercase the sentence here and then work with lower case from there
     detectSentences(comment).flatMap(sentence => classify(sentence, comment))
   }
 }
